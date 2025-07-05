@@ -24,11 +24,11 @@ function Register() {
       const res = await axios.post(
         "http://localhost:5000/api/users/register",
         formData,
-        { withCredentials: true } // Important for JWT cookie
+        { withCredentials: true } 
       );
 
-      alert(res.data.msg); // Show success message
-      navigate("/login"); // Redirect to login
+      alert(res.data.msg);
+      navigate("/login");
     } catch (err) {
       alert(err.response.data.msg || "Registration failed");
     }
